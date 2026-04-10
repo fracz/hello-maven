@@ -1,21 +1,20 @@
 package pl.edu.agh.mwo.hellomaven;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class AppTest {
-
     /**
      * Sample test.
      */
     @Test
     public void sampleTest() {
-        Assert.assertTrue(true);
+        Assertions.assertTrue(true);
     }
-    
+
     @Test
     public void testRandomDiceRoll() {
         int randomNumber = new App().getRandomNumber();
-        Assert.assertEquals("The dice is not fair.", 4, randomNumber);
+        Assertions.assertEquals(4, randomNumber, "The dice is not fair.");
     }
 }
